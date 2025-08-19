@@ -1,2 +1,19 @@
 # Files for AMS Framework
 Machine learning practitioners face a fundamental tradeoff between predictive performance and model interpretability, often sacrificing understanding for accuracy when deploying black-box methods. We introduce an adaptive polynomial selection (APS) framework that automatically chooses between additive polynomial selection (APS) and multiplicative polynomial selection (MAPS) to achieve both high performance and coefficient-level interpretability. Our approach uses GPU-accelerated forward selection with cross-validation to identify optimal polynomial features, while an adaptive method selector analyzes data characteristics to choose the appropriate modeling paradigm. We evaluate our framework against established baselines using a systematic design of experiments across 288 synthetic datasets spanning additive, multiplicative, and mixed functional relationships. Each experiment compares interpretable polynomial methods against cuML Random Forest and PyTorch multilayer perceptrons across varying noise levels, feature dimensions, and interaction complexities. Results demonstrate that interpretable polynomial methods achieve superior predictive performance while maintaining interpretability. Our approach attained 87.5\% strong success rates (outperforming baselines with high interpretability), with mean $R^2$ of 0.891 versus 0.777 for best black-box baselines—an 11.4 percentage point advantage. Coefficient recovery accuracy averaged 96.1\%, enabling practitioners to understand marginal effects while achieving competitive or superior performance. These findings challenge the conventional wisdom that interpretability requires sacrificing predictive accuracy, demonstrating that principled polynomial selection can deliver both objectives simultaneously.
+
+# Structure
+
+**README.md**: you are *here*.
+**final.ipynb**:  Jupyter notebook with annotated blocks explaining classes, associated methods, and functions
+**requirements.txt**:  List of the minimal packages needed to run the code
+**API**:  directory containing the API for implementation of the Python code with subdirectories
+      AMS/
+      ├── setup.py
+      ├── ams/
+      │   ├── __init__.py
+      │   ├── core.py
+      │   ├── utils.py
+      │   ├── evaluation.py
+      │   └── data_generation.py
+      └── examples/
+          └── basic_usage.py
