@@ -9,7 +9,7 @@ Machine learning practitioners face a fundamental tradeoff between predictive pe
 
 **requirements.txt**:  List of the minimal packages needed to run the code
 
-**API**:  directory containing the API for implementation of the Python code with subdirectories
+**AMS API.zip**:  zip file containing the API for implementation of the Python code with subdirectories
 
       AMS/
       ├── setup.py
